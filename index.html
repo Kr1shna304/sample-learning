@@ -1,14 +1,45 @@
 <!DOCTYPE html>
-<html> 
+<html lang="en">
 <head>
-<title> Hello, World! </title>
-<link rel="stylesheet" href="bluestyle.css">
+    <title>Tasks</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<h1> Hello babai </h1>
-<p> This is sai </p>
-</p> This is chinnu </p>
-</body>
 
+    <div class="todo-section">
+        <h1>TODO's</h1>
+        <button onclick="openModal()">Add Task</button>
+    </div>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="hello">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Add Task</h2>
+            </div>
+            
+            <form>
+                <input type="text" id="taskTitle" name="taskTitle" placeholder="Title" required>
+                <br>
+                <textarea id="taskDescription" name="taskDescription" placeholder="Description" required></textarea>
+                <div class="buttons">
+                    <button type="button" class="cancel-button" onclick="closeModal()">Cancel</button>
+                    <button type="button" class="save-button" onclick="addTask()">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div>
+        <h2>My TodoList</h2>
+        <div id="taskListContainer" class="task-list-container">
+            <!-- Tasks will be displayed here -->
+        </div>
+    </div>
+
+    <script src="script.js"> </script>
+
+</body>
 </html>
